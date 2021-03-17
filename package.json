@@ -43,6 +43,10 @@
       {
         "command": "test-workspace-file",
         "title": "Test 'vscode.workspace.workspaceFile'"
+      },
+      {
+        "command": "test-vscode-extension-uri",
+        "title": "Test 'extensionUri' from vscode.ExtensionContext"
       }
     ]
   },

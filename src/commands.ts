@@ -1,5 +1,5 @@
-import { posix } from "path";
 import * as fs from "fs";
+import { posix } from "path";
 import * as vscode from "vscode";
 
 const defaultFile = "package.json";
@@ -124,4 +124,10 @@ function getWorkspaceFolder(): vscode.WorkspaceFolder {
     throw new Error("A workspace folder is not open");
   }
   return workspaceFolders[0];
+}
+
+export function testVsCodeExtensionUri(context: vscode.ExtensionContext): void {
+  vscode.window.showInformationMessage(
+    `The extension URI is: ${context.extensionUri}`
+  );
 }

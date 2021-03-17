@@ -7,6 +7,7 @@ The extension contains the following commands:
 - `Create file-copy`
 - `Test update Workspace launch configurations`
 - `Test 'vscode.workspace.workspaceFile'`
+- `Test 'extensionUri' from 'vscode.ExtensionContext'`
 
 The commands are availeble for running from Command Palette (F1).
 
@@ -44,3 +45,6 @@ The new test configuration should be available for running from `Debug` panel.
 The `Test 'vscode.workspace.workspaceFile'` command should just display a notification with info about path to current workspace config file (like: `/some/path/testVsCodeWorkspace.code-workspace`). It works well for `VS Code`. But for `Theia` - it's `undefined`.
 
 `Note:` it's expected that multi-root workspace from a config file is open for testing
+
+## 'context.extensionUri' from 'context: vscode.ExtensionContext'
+The `Test 'extensionUri' from 'vscode.ExtensionContext'` command should just display a notification with the path to the current test extension
