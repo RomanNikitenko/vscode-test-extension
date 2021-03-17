@@ -8,6 +8,7 @@ The extension contains the following commands:
 - `Test update Workspace launch configurations`
 - `Test 'vscode.workspace.workspaceFile'`
 - `Test 'extensionUri' from 'vscode.ExtensionContext'`
+- `Test 'workbench.action.files.openFileFolder'`
 
 The commands are availeble for running from Command Palette (F1).
 
@@ -48,3 +49,6 @@ The `Test 'vscode.workspace.workspaceFile'` command should just display a notifi
 
 ## 'context.extensionUri' from 'context: vscode.ExtensionContext'
 The `Test 'extensionUri' from 'vscode.ExtensionContext'` command should just display a notification with the path to the current test extension
+
+## 'workbench.action.files.openFileFolder'
+The `Test 'workbench.action.files.openFileFolder'` command should display a dialog which allows to open a file or a directory 

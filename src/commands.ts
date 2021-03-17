@@ -131,3 +131,7 @@ export function testVsCodeExtensionUri(context: vscode.ExtensionContext): void {
     `The extension URI is: ${context.extensionUri}`
   );
 }
+
+export function testVsCodeOpenFileFolderCommand(): void {
+  vscode.commands.executeCommand("workbench.action.files.openFileFolder");
+}

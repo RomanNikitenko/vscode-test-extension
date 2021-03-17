@@ -5,6 +5,7 @@ import {
   testVsCodeDiffCommand,
   testVsCodeExtensionUri,
   testVsCodeOpenCommand,
+  testVsCodeOpenFileFolderCommand,
   testWorkspaceFileAPI,
 } from "./commands";
 import { updateWorkspaceLaunchConfigs } from "./workspace-api";
@@ -17,6 +18,7 @@ namespace TestCommands {
   export const URI_JOIN_PATH = "test-uri-join-path";
   export const WORKSPACE_FILE = "test-workspace-file";
   export const VSCODE_EXTENSION_URI = "test-vscode-extension-uri";
+  export const VSCODE_OPEN_FILE_FOLDER = "test-vscode-open-file-folder";
 }
 
 export function registerVsCodeOpenCommand(context: vscode.ExtensionContext) {
@@ -75,6 +77,16 @@ export function registerExtensionUriCommand(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     TestCommands.VSCODE_EXTENSION_URI,
     () => testVsCodeExtensionUri(context)
+  );
+  context.subscriptions.push(disposable);
+}
+
+export function registerOpenFileFolderCommand(
+  context: vscode.ExtensionContext
+) {
+  const disposable = vscode.commands.registerCommand(
+    TestCommands.VSCODE_OPEN_FILE_FOLDER,
+    testVsCodeOpenFileFolderCommand
   );
   context.subscriptions.push(disposable);
 }
