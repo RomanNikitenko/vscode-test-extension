@@ -5,6 +5,7 @@ import {
   testVsCodeDiffCommand,
   testVsCodeExtensionUri,
   testVsCodeStorageUri,
+  testVsCodeGlobalStorageUri,
   testVsCodeOpenCommand,
   testVsCodeOpenFileFolderCommand,
   testWorkspaceFileAPI,
@@ -21,6 +22,7 @@ namespace TestCommands {
   export const VSCODE_EXTENSION_URI = "test-vscode-extension-uri";
   export const VSCODE_OPEN_FILE_FOLDER = "test-vscode-open-file-folder";
   export const VSCODE_STORAGE_URI = "test-vscode-storage-uri";
+  export const VSCODE_GLOBAL_STORAGE_URI = "test-vscode-global-storage-uri";
 }
 
 export function registerVsCodeOpenCommand(context: vscode.ExtensionContext) {
@@ -87,6 +89,16 @@ export function registerStorageUriCommand(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     TestCommands.VSCODE_STORAGE_URI,
     () => testVsCodeStorageUri(context)
+  );
+  context.subscriptions.push(disposable);
+}
+
+export function registerGlobalStorageUriCommand(
+  context: vscode.ExtensionContext
+) {
+  const disposable = vscode.commands.registerCommand(
+    TestCommands.VSCODE_GLOBAL_STORAGE_URI,
+    () => testVsCodeGlobalStorageUri(context)
   );
   context.subscriptions.push(disposable);
 }

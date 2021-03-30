@@ -138,6 +138,14 @@ export function testVsCodeStorageUri(context: vscode.ExtensionContext): void {
   );
 }
 
+export function testVsCodeGlobalStorageUri(
+  context: vscode.ExtensionContext
+): void {
+  vscode.window.showInformationMessage(
+    `The global storage URI is: ${context.globalStorageUri}`
+  );
+}
+
 export function testVsCodeOpenFileFolderCommand(): void {
   vscode.commands.executeCommand("workbench.action.files.openFileFolder");
 }

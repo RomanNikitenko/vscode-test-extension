@@ -3,6 +3,7 @@ import {
   registerCreateCopyFileCommand,
   registerExtensionUriCommand,
   registerStorageUriCommand,
+  registerGlobalStorageUriCommand,
   registerOpenFileFolderCommand,
   registerUpdateLaunchConfigsCommand,
   registerUriJoinPathCommand,
@@ -21,6 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
   registerExtensionUriCommand(context);
   registerOpenFileFolderCommand(context);
   registerStorageUriCommand(context);
+  registerGlobalStorageUriCommand(context);
 }
 
 export function deactivate() {}

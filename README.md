@@ -8,6 +8,7 @@ The extension contains the following commands:
 - `Test update Workspace launch configurations`
 - `Test 'vscode.workspace.workspaceFile'`
 - `Test 'storageUri' from 'vscode.ExtensionContext'`
+- `Test 'globalStorageUri' from 'vscode.ExtensionContext'`
 - `Test 'extensionUri' from 'vscode.ExtensionContext'`
 - `Test 'workbench.action.files.openFileFolder'`
 
@@ -53,6 +54,9 @@ The `Test 'extensionUri' from 'vscode.ExtensionContext'` command should just dis
 
 ## 'context.storageUri' from 'context: vscode.ExtensionContext'
 The `Test 'storageUri' from 'vscode.ExtensionContext'` command should just display a notification with the storage Uri
+
+## 'context.globalStorageUri' from 'context: vscode.ExtensionContext'
+The `Test 'globalStorageUri' from 'vscode.ExtensionContext'` command should just display a notification with the global storage Uri
 
 ## 'workbench.action.files.openFileFolder'
 The `Test 'workbench.action.files.openFileFolder'` command should display a dialog which allows to open a file or a directory 

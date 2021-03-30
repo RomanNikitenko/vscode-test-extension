@@ -53,6 +53,10 @@
         "title": "Test 'storageUri' from vscode.ExtensionContext"
       },
       {
+        "command": "test-vscode-global-storage-uri",
+        "title": "Test 'globalStorageUri' from vscode.ExtensionContext"
+      },
+      {
         "command": "test-vscode-open-file-folder",
         "title": "Test 'workbench.action.files.openFileFolder'"
       }
