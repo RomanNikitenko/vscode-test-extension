@@ -132,6 +132,12 @@ export function testVsCodeExtensionUri(context: vscode.ExtensionContext): void {
   );
 }
 
+export function testVsCodeStorageUri(context: vscode.ExtensionContext): void {
+  vscode.window.showInformationMessage(
+    `The storage URI is: ${context.storageUri}`
+  );
+}
+
 export function testVsCodeOpenFileFolderCommand(): void {
   vscode.commands.executeCommand("workbench.action.files.openFileFolder");
 }

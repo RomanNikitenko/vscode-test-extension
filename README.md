@@ -7,6 +7,7 @@ The extension contains the following commands:
 - `Create file-copy`
 - `Test update Workspace launch configurations`
 - `Test 'vscode.workspace.workspaceFile'`
+- `Test 'storageUri' from 'vscode.ExtensionContext'`
 - `Test 'extensionUri' from 'vscode.ExtensionContext'`
 - `Test 'workbench.action.files.openFileFolder'`
 
@@ -49,6 +50,9 @@ The `Test 'vscode.workspace.workspaceFile'` command should just display a notifi
 
 ## 'context.extensionUri' from 'context: vscode.ExtensionContext'
 The `Test 'extensionUri' from 'vscode.ExtensionContext'` command should just display a notification with the path to the current test extension
+
+## 'context.storageUri' from 'context: vscode.ExtensionContext'
+The `Test 'storageUri' from 'vscode.ExtensionContext'` command should just display a notification with the storage Uri
 
 ## 'workbench.action.files.openFileFolder'
 The `Test 'workbench.action.files.openFileFolder'` command should display a dialog which allows to open a file or a directory 

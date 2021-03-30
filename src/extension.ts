@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import {
   registerCreateCopyFileCommand,
   registerExtensionUriCommand,
+  registerStorageUriCommand,
   registerOpenFileFolderCommand,
   registerUpdateLaunchConfigsCommand,
   registerUriJoinPathCommand,
@@ -19,6 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
   registerWorkspaceFileCommand(context);
   registerExtensionUriCommand(context);
   registerOpenFileFolderCommand(context);
+  registerStorageUriCommand(context);
 }
 
 export function deactivate() {}
