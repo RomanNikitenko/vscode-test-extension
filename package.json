@@ -19,6 +19,16 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "keybindings": [
+      {
+        "command": "type",
+        "key": "alt+7",
+        "when": "editorTextFocus",
+        "args": {
+          "text": "some arguments from keybinding"
+        }
+      }
+    ],
     "commands": [
       {
         "command": "test-vscode-open",

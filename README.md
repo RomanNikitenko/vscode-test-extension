@@ -12,7 +12,7 @@ The extension contains the following commands:
 - `Test 'extensionUri' from 'vscode.ExtensionContext'`
 - `Test 'workbench.action.files.openFileFolder'`
 
-The commands are availeble for running from Command Palette (F1).
+The commands are available for running from Command Palette (F1).
 
 ## 'vscode.open' and 'vscode.diff' commands
 The extension allows to test `vscode.open` and `vscode.diff` commands, please see more details the corresponding commands [here](https://code.visualstudio.com/api/references/commands#commands).
@@ -60,3 +60,12 @@ The `Test 'globalStorageUri' from 'vscode.ExtensionContext'` command should just
 
 ## 'workbench.action.files.openFileFolder'
 The `Test 'workbench.action.files.openFileFolder'` command should display a dialog which allows to open a file or a directory 
+
+## `keybindings` contribution.
+To test `keybindings`:
+
+- open a file
+- set cursor in any place of the file
+- press `alt+7` in the text editor
+
+The expected behavior: `some arguments from keybinding` text should be inserted.
