@@ -10,6 +10,8 @@ import {
   registerVsCodeDiffCommand,
   registerVsCodeOpenCommand,
   registerWorkspaceFileCommand,
+  registerGetTasksExecutionsCommand,
+  registerTerminateTaskUsingExecutionCommand
 } from "./commands-registry";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -23,6 +25,8 @@ export function activate(context: vscode.ExtensionContext) {
   registerOpenFileFolderCommand(context);
   registerStorageUriCommand(context);
   registerGlobalStorageUriCommand(context);
+  registerGetTasksExecutionsCommand(context);
+  registerTerminateTaskUsingExecutionCommand(context);
 }
 
 export function deactivate() {}

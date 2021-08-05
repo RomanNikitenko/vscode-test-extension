@@ -9,6 +9,8 @@ import {
   testVsCodeOpenCommand,
   testVsCodeOpenFileFolderCommand,
   testWorkspaceFileAPI,
+  testGettingTasksExecutions,
+  testTerminatingTasksUsingExecutions
 } from "./commands";
 import { updateWorkspaceLaunchConfigs } from "./workspace-api";
 
@@ -23,6 +25,8 @@ namespace TestCommands {
   export const VSCODE_OPEN_FILE_FOLDER = "test-vscode-open-file-folder";
   export const VSCODE_STORAGE_URI = "test-vscode-storage-uri";
   export const VSCODE_GLOBAL_STORAGE_URI = "test-vscode-global-storage-uri";
+  export const GET_TASKS_EXECUTIONS = "test-getting-tasks-executions";
+  export const TERMINATE_TASKS_USING_EXECUTIONS = "test-terminating-task-using-execution";
 }
 
 export function registerVsCodeOpenCommand(context: vscode.ExtensionContext) {
@@ -109,6 +113,26 @@ export function registerOpenFileFolderCommand(
   const disposable = vscode.commands.registerCommand(
     TestCommands.VSCODE_OPEN_FILE_FOLDER,
     testVsCodeOpenFileFolderCommand
+  );
+  context.subscriptions.push(disposable);
+}
+
+export function registerGetTasksExecutionsCommand(
+  context: vscode.ExtensionContext
+) {
+  const disposable = vscode.commands.registerCommand(
+    TestCommands.GET_TASKS_EXECUTIONS,
+    testGettingTasksExecutions
+  );
+  context.subscriptions.push(disposable);
+}
+
+export function registerTerminateTaskUsingExecutionCommand(
+  context: vscode.ExtensionContext
+) {
+  const disposable = vscode.commands.registerCommand(
+    TestCommands.TERMINATE_TASKS_USING_EXECUTIONS,
+    testTerminatingTasksUsingExecutions
   );
   context.subscriptions.push(disposable);
 }

@@ -149,3 +149,32 @@ export function testVsCodeGlobalStorageUri(
 export function testVsCodeOpenFileFolderCommand(): void {
   vscode.commands.executeCommand("workbench.action.files.openFileFolder");
 }
+
+export function testGettingTasksExecutions(): void {
+  const executions = vscode.tasks.taskExecutions;
+
+  console.dir(executions);
+
+  if (executions.length > 0) {
+    executions.forEach(execution => {
+      vscode.window.showInformationMessage(`The execution for a task with label ${execution.task.name} was found`);
+    });
+  } else {
+    vscode.window.showInformationMessage('No executions were found');
+  }
+}
+
+export function testTerminatingTasksUsingExecutions(): void {
+  const executions = vscode.tasks.taskExecutions;
+
+  console.dir(executions);
+
+  if (executions.length > 0) {
+    executions.forEach(execution => {
+      execution.terminate();
+      vscode.window.showInformationMessage(`The execution for a task with label ${execution.task.name} was found`);
+    });
+  } else {
+    vscode.window.showInformationMessage('No executions were found');
+  }
+}

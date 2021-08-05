@@ -11,6 +11,8 @@ The extension contains the following commands:
 - `Test 'globalStorageUri' from 'vscode.ExtensionContext'`
 - `Test 'extensionUri' from 'vscode.ExtensionContext'`
 - `Test 'workbench.action.files.openFileFolder'`
+- `Test 'vscode.tasks.taskExecutions'`
+- `Test 'taskExecution.terminate()'`
 
 The commands are available for running from Command Palette (F1).
 
@@ -69,3 +71,15 @@ To test `keybindings`:
 - press `alt+7` in the text editor
 
 The expected behavior: `some arguments from keybinding` text should be inserted.
+
+## 'vscode.tasks.taskExecutions'
+The `Test 'vscode.tasks.taskExecutions'` command should display a notification for each running task
+
+## 'execution.terminate()' from 'vscode.tasks.taskExecutions'
+To test 'taskExecution.terminate()':
+- run a long running task
+- check that it's still running using `Terminal => Show Running Tasks`
+- `F1 => Test 'taskExecution.terminate()'`
+- a notification for the running task should be displayed
+- go to `Terminal => Show Running Tasks`
+- the task should be terminated

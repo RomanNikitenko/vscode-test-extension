@@ -69,6 +69,14 @@
       {
         "command": "test-vscode-open-file-folder",
         "title": "Test 'workbench.action.files.openFileFolder'"
+      },
+      {
+        "command": "test-getting-tasks-executions",
+        "title": "Test 'vscode.tasks.taskExecutions'"
+      },
+      {
+        "command": "test-terminating-task-using-execution",
+        "title": "Test 'taskExecution.terminate()'"
       }
     ]
   },
